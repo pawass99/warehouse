@@ -95,6 +95,21 @@ def inject_custom_css() -> None:
                 letter-spacing: 0;
             }
 
+            [data-testid="stWidgetLabel"],
+            [data-testid="stWidgetLabel"] label,
+            [data-testid="stWidgetLabel"] p,
+            [data-testid="stTextInput"] label,
+            [data-testid="stTextInput"] label p,
+            [data-testid="stNumberInput"] label,
+            [data-testid="stNumberInput"] label p,
+            [data-testid="stDateInput"] label,
+            [data-testid="stDateInput"] label p,
+            [data-testid="stMultiSelect"] label,
+            [data-testid="stMultiSelect"] label p {
+                color: var(--fg) !important;
+                -webkit-text-fill-color: var(--fg) !important;
+            }
+
             [data-testid="stSidebar"] {
                 background: var(--surface);
                 border-right: 1px solid var(--border-soft);
@@ -265,9 +280,56 @@ def inject_custom_css() -> None:
             div[data-baseweb="popover"] li,
             div[data-baseweb="popover"] [role="option"],
             div[data-baseweb="menu"] div {
-                background: var(--surface-strong) !important;
+                background: var(--surface) !important;
                 color: var(--fg) !important;
                 -webkit-text-fill-color: var(--fg) !important;
+            }
+
+            div[data-baseweb="calendar"],
+            div[data-baseweb="calendar"] div,
+            div[data-baseweb="calendar"] span,
+            div[data-baseweb="calendar"] table,
+            div[data-baseweb="calendar"] thead,
+            div[data-baseweb="calendar"] tbody,
+            div[data-baseweb="calendar"] tr,
+            div[data-baseweb="calendar"] th,
+            div[data-baseweb="calendar"] td,
+            div[data-baseweb="calendar"] [role="grid"],
+            div[data-baseweb="calendar"] [role="row"],
+            div[data-baseweb="calendar"] [role="gridcell"] {
+                background: var(--surface) !important;
+                color: var(--fg) !important;
+                -webkit-text-fill-color: var(--fg) !important;
+            }
+
+            div[data-baseweb="calendar"] {
+                border: 1px solid var(--border-soft) !important;
+                border-radius: 12px !important;
+                box-shadow: var(--shadow-raised) !important;
+                overflow: hidden;
+            }
+
+            div[data-baseweb="calendar"] button {
+                background: transparent !important;
+                border-radius: 8px !important;
+                color: var(--fg) !important;
+                -webkit-text-fill-color: var(--fg) !important;
+            }
+
+            div[data-baseweb="calendar"] button:hover,
+            div[data-baseweb="calendar"] [aria-selected="true"],
+            div[data-baseweb="calendar"] [aria-selected="true"] button {
+                background: var(--surface-warm) !important;
+                color: var(--fg) !important;
+                -webkit-text-fill-color: var(--fg) !important;
+            }
+
+            div[data-baseweb="calendar"] button:disabled,
+            div[data-baseweb="calendar"] [aria-disabled="true"],
+            div[data-baseweb="calendar"] [aria-disabled="true"] button {
+                color: var(--meta) !important;
+                -webkit-text-fill-color: var(--meta) !important;
+                opacity: 0.65;
             }
 
             span[data-baseweb="tag"] {
